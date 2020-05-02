@@ -17,7 +17,7 @@ class LojasListData {
 
   static List<LojasListData> lojasList = <LojasListData>[
     LojasListData(
-      imagePath: 'assets/images/floricultura.png',
+      imagePath: 'assets/images/old_floricultura.png',
       titleTxt: 'Floricultura do Linguee',
       subTxt: 'Wembley, London',
       dist: 4.0,

@@ -1,10 +1,9 @@
-
 import 'package:flutter/material.dart';
 import 'package:megahack/pages/lojas/loja_info_screen.dart';
 import 'package:megahack/pages/main/lojas_app_theme.dart';
 import 'package:smooth_star_rating/smooth_star_rating.dart';
-
 import 'model/lojas_list_data.dart';
+
 
 class LojasListView extends StatelessWidget {
   const LojasListView(

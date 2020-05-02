@@ -3,6 +3,7 @@ import 'lojas_app_theme.dart';
 import 'products_screen.dart';
 import 'package:panorama/panorama.dart';
 
+
 class LojaInfoScreen extends StatefulWidget {
   @override
   _LojaInfoScreenState createState() => _LojaInfoScreenState();
@@ -54,13 +55,13 @@ class _LojaInfoScreenState extends State<LojaInfoScreen>
         backgroundColor: Colors.transparent,
         body: Stack(
           children: <Widget>[
-
-            // TODO implementar panorama
             Column(
               children: <Widget>[
                 AspectRatio(
                   aspectRatio: 1.2,
-                  child: Image.asset('assets/products/logo3.png'),
+                  child: Panorama(
+                    child:Image.asset('assets/images/floricultura.jpg'),
+                  ),
                 ),
               ],
             ),
