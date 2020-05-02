@@ -1,6 +1,7 @@
 import 'package:megahack/pages/lojas/lojas_app_theme.dart';
 import 'package:megahack/pages/lojas/models/produto_unitario.dart';
 import 'package:flutter/material.dart';
+import 'package:megahack/pages/lojas/product_info.dart';
 
 class PopularLojasListView extends StatefulWidget {
   const PopularLojasListView({Key key, this.callBack}) : super(key: key);
@@ -102,8 +103,12 @@ class CategoryView extends StatelessWidget {
                 0.0, 50 * (1.0 - animation.value), 0.0),
             child: InkWell(
               splashColor: Colors.transparent,
-              onTap: () {
-                callback();
+              onTap: (){
+               Navigator.push(
+                 context,
+                 new MaterialPageRoute(
+                 builder: (BuildContext context) =>
+                 ProductInfo()));
               },
               child: SizedBox(
                 height: 280,
