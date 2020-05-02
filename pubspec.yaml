@@ -15,6 +15,7 @@ dependencies:
   font_awesome_flutter: ^8.5.0
   smooth_star_rating: ^1.0.3
   panorama: ^0.0.2
+  flutter_slidable: ^0.5.4
 
 dev_dependencies:
   flutter_test:

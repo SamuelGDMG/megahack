@@ -1,3 +1,4 @@
+import 'package:megahack/pages/chat/chat.dart';
 import 'package:megahack/pages/lojas/produtos_list_view.dart';
 import 'package:megahack/pages/lojas/loja_info_screen.dart';
 import 'package:megahack/pages/lojas/popular_products_list_view.dart';
@@ -17,6 +18,17 @@ class _ProductsScreenState extends State<ProductsScreen> {
     return Container(
       color: LojaAppTheme.nearlyWhite,
       child: Scaffold(
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            Navigator.push<dynamic>(
+              context,
+              MaterialPageRoute<dynamic>(
+                builder: (BuildContext context) => Chat(),
+              ),
+            );
+          },
+          child: Icon(Icons.chat),
+        ),
         backgroundColor: Colors.transparent,
         body: Column(
           children: <Widget>[
@@ -147,9 +159,8 @@ class _ProductsScreenState extends State<ProductsScreen> {
     return Expanded(
       child: Container(
         decoration: BoxDecoration(
-            color: isSelected
-                ? LojaAppTheme.nearlyBlue
-                : LojaAppTheme.nearlyWhite,
+            color:
+                isSelected ? LojaAppTheme.nearlyBlue : LojaAppTheme.nearlyWhite,
             borderRadius: const BorderRadius.all(Radius.circular(24.0)),
             border: Border.all(color: LojaAppTheme.nearlyBlue)),
         child: Material(
