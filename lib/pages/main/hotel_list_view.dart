@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:megahack/pages/design_course/course_info_screen.dart';
 import 'package:megahack/pages/main/hotel_app_theme.dart';
 import 'package:smooth_star_rating/smooth_star_rating.dart';
 
@@ -55,12 +55,21 @@ class HotelListView extends StatelessWidget {
                       children: <Widget>[
                         Column(
                           children: <Widget>[
-                            AspectRatio(
+                            GestureDetector(
+                              child: AspectRatio(
                               aspectRatio: 2,
                               child: Image.asset(
                                 hotelData.imagePath,
                                 fit: BoxFit.cover,
                               ),
+                            ),
+                            onTap: (){
+                                            Navigator.push(
+                                                context,
+                                                new MaterialPageRoute(
+                                                    builder: (BuildContext context) =>
+                                                        CourseInfoScreen()));
+                                          },
                             ),
                             Container(
                               color: HotelAppTheme.buildLightTheme()
