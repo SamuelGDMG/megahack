@@ -30,7 +30,7 @@ class PopularFilterListData {
     ),
   ];
 
-  static List<PopularFilterListData> accomodationList = [
+  static List<PopularFilterListData> lojaList = [
     PopularFilterListData(
       titleTxt: 'Todas',
       isSelected: false,

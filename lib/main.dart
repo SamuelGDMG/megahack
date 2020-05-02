@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:megahack/pages/main/hotel_home_screen.dart';
+import 'package:megahack/pages/main/home_screen.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(MegaHack());
 }
 
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+class MegaHack extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      home: HotelHomeScreen(),
+      title: 'Megahack',
+      home: HomeScreen(),
+        debugShowCheckedModeBanner: false,
     );
   }
 }

@@ -1,8 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'range_slider_view.dart';
 import 'slider_view.dart';
-import 'hotel_app_theme.dart';
+import 'lojas_app_theme.dart';
 import 'model/popular_filter_list.dart';
 
 class FiltersScreen extends StatefulWidget {
@@ -13,8 +12,8 @@ class FiltersScreen extends StatefulWidget {
 class _FiltersScreenState extends State<FiltersScreen> {
   List<PopularFilterListData> popularFilterListData =
       PopularFilterListData.popularFList;
-  List<PopularFilterListData> accomodationListData =
-      PopularFilterListData.accomodationList;
+  List<PopularFilterListData> lojaListData =
+      PopularFilterListData.lojaList;
 
   RangeValues _values = const RangeValues(100, 600);
   double distValue = 50.0;
@@ -22,7 +21,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: HotelAppTheme.buildLightTheme().backgroundColor,
+      color: LojasAppTheme.buildLightTheme().backgroundColor,
       child: Scaffold(
         backgroundColor: Colors.transparent,
         body: Column(
@@ -40,7 +39,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
                     const Divider(
                       height: 1,
                     ),
-                    allAccommodationUI()
+                    allLojasUI()
                   ],
                 ),
               ),
@@ -54,7 +53,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
               child: Container(
                 height: 48,
                 decoration: BoxDecoration(
-                  color: HotelAppTheme.buildLightTheme().primaryColor,
+                  color: LojasAppTheme.buildLightTheme().primaryColor,
                   borderRadius: const BorderRadius.all(Radius.circular(24.0)),
                   boxShadow: <BoxShadow>[
                     BoxShadow(
@@ -91,7 +90,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
     );
   }
 
-  Widget allAccommodationUI() {
+  Widget allLojasUI() {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -111,7 +110,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
         Padding(
           padding: const EdgeInsets.only(right: 16, left: 16),
           child: Column(
-            children: getAccomodationListUI(),
+            children: getLojasListUI(),
           ),
         ),
         const SizedBox(
@@ -121,10 +120,10 @@ class _FiltersScreenState extends State<FiltersScreen> {
     );
   }
 
-  List<Widget> getAccomodationListUI() {
+  List<Widget> getLojasListUI() {
     final List<Widget> noList = <Widget>[];
-    for (int i = 0; i < accomodationListData.length; i++) {
-      final PopularFilterListData date = accomodationListData[i];
+    for (int i = 0; i < lojaListData.length; i++) {
+      final PopularFilterListData date = lojaListData[i];
       noList.add(
         Material(
           color: Colors.transparent,
@@ -147,7 +146,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
                   ),
                   CupertinoSwitch(
                     activeColor: date.isSelected
-                        ? HotelAppTheme.buildLightTheme().primaryColor
+                        ? LojasAppTheme.buildLightTheme().primaryColor
                         : Colors.grey.withOpacity(0.6),
                     onChanged: (bool value) {
                       setState(() {
@@ -173,33 +172,33 @@ class _FiltersScreenState extends State<FiltersScreen> {
 
   void checkAppPosition(int index) {
     if (index == 0) {
-      if (accomodationListData[0].isSelected) {
-        accomodationListData.forEach((d) {
+      if (lojaListData[0].isSelected) {
+        lojaListData.forEach((d) {
           d.isSelected = false;
         });
       } else {
-        accomodationListData.forEach((d) {
+        lojaListData.forEach((d) {
           d.isSelected = true;
         });
       }
     } else {
-      accomodationListData[index].isSelected =
-          !accomodationListData[index].isSelected;
+      lojaListData[index].isSelected =
+          !lojaListData[index].isSelected;
 
       int count = 0;
-      for (int i = 0; i < accomodationListData.length; i++) {
+      for (int i = 0; i < lojaListData.length; i++) {
         if (i != 0) {
-          final PopularFilterListData data = accomodationListData[i];
+          final PopularFilterListData data = lojaListData[i];
           if (data.isSelected) {
             count += 1;
           }
         }
       }
 
-      if (count == accomodationListData.length - 1) {
-        accomodationListData[0].isSelected = true;
+      if (count == lojaListData.length - 1) {
+        lojaListData[0].isSelected = true;
       } else {
-        accomodationListData[0].isSelected = false;
+        lojaListData[0].isSelected = false;
       }
     }
   }
@@ -294,7 +293,7 @@ class _FiltersScreenState extends State<FiltersScreen> {
                                 ? Icons.check_box
                                 : Icons.check_box_outline_blank,
                             color: date.isSelected
-                                ? HotelAppTheme.buildLightTheme().primaryColor
+                                ? LojasAppTheme.buildLightTheme().primaryColor
                                 : Colors.grey.withOpacity(0.6),
                           ),
                           const SizedBox(
@@ -326,39 +325,10 @@ class _FiltersScreenState extends State<FiltersScreen> {
     return noList;
   }
 
-  Widget priceBarFilter() {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: <Widget>[
-        Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Text(
-            'Price (for 1 night)',
-            textAlign: TextAlign.left,
-            style: TextStyle(
-                color: Colors.grey,
-                fontSize: MediaQuery.of(context).size.width > 360 ? 18 : 16,
-                fontWeight: FontWeight.normal),
-          ),
-        ),
-        RangeSliderView(
-          values: _values,
-          onChangeRangeValues: (RangeValues values) {
-            _values = values;
-          },
-        ),
-        const SizedBox(
-          height: 8,
-        )
-      ],
-    );
-  }
-
   Widget getAppBarUI() {
     return Container(
       decoration: BoxDecoration(
-        color: HotelAppTheme.buildLightTheme().backgroundColor,
+        color: LojasAppTheme.buildLightTheme().backgroundColor,
         boxShadow: <BoxShadow>[
           BoxShadow(
               color: Colors.grey.withOpacity(0.2),
