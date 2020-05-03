@@ -25,7 +25,23 @@ class _CartPageState extends State<CartPage> {
         padding: EdgeInsets.fromLTRB(10.0,0,10.0,130),
         child: ListView(
           children: <Widget>[
-            SizedBox(height: 10.0),
+            SizedBox(height: 20.0),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget>[
+                  InkWell(
+                    borderRadius:
+                        BorderRadius.circular(AppBar().preferredSize.height),
+                    child: Icon(
+                      Icons.arrow_back_ios,
+                      color: LojaAppTheme.nearlyBlack,
+                    ),
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                  ),
+            ],),
+            SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
@@ -50,7 +66,7 @@ class _CartPageState extends State<CartPage> {
               title: Text(
                 "Samuel Biladin",
                 style: TextStyle(
-//                    fontSize: 15,
+                  fontSize: 15,
                   fontWeight: FontWeight.w900,
                 ),
               ),
@@ -102,10 +118,137 @@ class _CartPageState extends State<CartPage> {
               ),
             ),
 
+            SizedBox(height: 20),
+            
+            Row(
+              children: <Widget>[
+            Container(
+                height: MediaQuery.of(context).size.width/3.5,
+                width: MediaQuery.of(context).size.width/3,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(8.0),
+                  child: Image.asset(
+                    "assets/products/product5.jpg",
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+              Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                Text(
+                  "Arranjo de Flores Luz e Amor",
+                  style: TextStyle(
+//                    fontSize: 15,
+                    fontWeight: FontWeight.w900,
+                  ),
+                ),
+                Row(
+                  children: <Widget>[
+                Icon(
+                      Icons.favorite,
+                      color: LojaAppTheme.nearlyBlue,
+                      ),
+                    Text(
+                      "5.0 (23 Reviews)",
+                      style: TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.w300,
+                      ),
+                    ),
+                ],
+                ),
+                SizedBox(height: 2),
+                Text(
+                  "Quantidade: 1",
+                  style: TextStyle(
+                    fontSize: 15.0,
+                    fontWeight: FontWeight.w300,
+                  ),
+                ),
+                SizedBox(height: 5),
+                Text(
+                  "Preço: R\$ 25,00",
+                  style: TextStyle(
+                    fontSize: 15.0,
+                    fontWeight: FontWeight.w300,
+                  ),
+                ),
+              ]
+            ),
+            SizedBox(height: 10.0),
+            ],
+            ),
+
+
+            SizedBox(height: 20),
+
+            Row(
+              children: <Widget>[
+            Container(
+                height: MediaQuery.of(context).size.width/3.5,
+                width: MediaQuery.of(context).size.width/3,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(8.0),
+                  child: Image.asset(
+                    "assets/products/product1.jpg",
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+              Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                Text(
+                  "Para um dia radiante",
+                  style: TextStyle(
+//                    fontSize: 15,
+                    fontWeight: FontWeight.w900,
+                  ),
+                ),
+                Row(
+                  children: <Widget>[
+                Icon(
+                      Icons.favorite,
+                      color: LojaAppTheme.nearlyBlue,
+                      ),
+                    Text(
+                      "4.5 (7 Reviews)",
+                      style: TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.w300,
+                      ),
+                    ),
+                ],
+                ),
+                SizedBox(height: 2),
+                Text(
+                  "Quantidade: 2",
+                  style: TextStyle(
+                    fontSize: 15.0,
+                    fontWeight: FontWeight.w300,
+                  ),
+                ),
+                SizedBox(height: 5),
+                Text(
+                  "Preço: R\$ 39,99",
+                  style: TextStyle(
+                    fontSize: 15.0,
+                    fontWeight: FontWeight.w300,
+                  ),
+                ),
+              ]
+            ),
+            SizedBox(height: 10.0),
+            ],
+            ),
+            
+
           ],
         ),
       ),
-
       bottomSheet: Card(
         elevation: 4.0,
         child: Container(
@@ -172,7 +315,7 @@ class _CartPageState extends State<CartPage> {
                         ),
 
                         Text(
-                          r"R$ 212",
+                          r"R$ 104,98",
                           style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w900,

@@ -185,6 +185,7 @@ class CategoryView extends StatelessWidget {
                                                                 .nearlyBlue,
                                                         size: 20,
                                                       ),
+                                                      
                                                     ],
                                                   ),
                                                 )
@@ -208,27 +209,21 @@ class CategoryView extends StatelessWidget {
                         ],
                       ),
                     ),
+
                     Container(
                       child: Padding(
                         padding:
-                            const EdgeInsets.only(top: 24, right: 16, left: 16),
+                            const EdgeInsets.only(top: 34, right: 16, left: 16),
                         child: Container(
                           decoration: BoxDecoration(
                             borderRadius:
                                 const BorderRadius.all(Radius.circular(16.0)),
-                            boxShadow: <BoxShadow>[
-                              BoxShadow(
-                                  color: LojaAppTheme.grey
-                                      .withOpacity(0.2),
-                                  offset: const Offset(0.0, 0.0),
-                                  blurRadius: 6.0),
-                            ],
                           ),
                           child: ClipRRect(
                             borderRadius:
                                 const BorderRadius.all(Radius.circular(16.0)),
                             child: AspectRatio(
-                                aspectRatio: 1.28,
+                                aspectRatio: 1.48,
                                 child: Image.asset(category.imagePath)),
                           ),
                         ),
