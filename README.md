@@ -13,6 +13,10 @@ Por meio features como: Visão panorâmica 360 do interior da loja, áudios desc
 Tudo isso você pode conferir na demonstração abaixo:
 - [Ver Pitch]()
 
+Instale o aplicativo em seu dispositivo Android:
+
+- [Baixar](https://github.com/SamuelGDMG/megahack/blob/master/apk/localmarket.apk)
+
 
 ## Telas
 
