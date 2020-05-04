@@ -21,19 +21,19 @@ Instale o aplicativo em seu dispositivo Android:
 ## Telas
 
 - Menu principal
-<img src="images/main1.png" height="300em">
+<img src="images/main1.png" height="500em">
 
-<img src="images/main2.png" height="300em">
+<img src="images/main2.png" height="500em">
 
-<img src="images/filter.png" height="300em">
+<img src="images/filter.png" height="500em">
 
 - Páginas da Loja
-<img src="images/store.png" height="300em">
+<img src="images/store.png" height="500em">
 
-<img src="images/products.png" height="300em">
+<img src="images/products.png" height="500em">
 
-<img src="images/single_product.png" height="300em">
+<img src="images/single_product.png" height="500em">
 
-<img src="images/chat_with_keyboard.png" height="300em">
+<img src="images/chat_with_keyboard.png" height="500em">
 
-<img src="images/cart.png" height="300em">
+<img src="images/cart.png" height="500em">
