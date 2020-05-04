@@ -22,19 +22,18 @@ Instale o aplicativo em seu dispositivo Android:
 
 - Menu principal
 <img src="images/main1.png" height="300em">
-![alt text](https://github.com/SamuelGDMG/megahack/blob/master/images/main1.png)
 
-![alt text](https://github.com/SamuelGDMG/megahack/blob/master/images/main2.png)
+<img src="images/main2.png" height="300em">
 
-![alt text](https://github.com/SamuelGDMG/megahack/blob/master/images/filter.png)
+<img src="images/filter.png" height="300em">
 
 - Páginas da Loja
-![alt text](https://github.com/SamuelGDMG/megahack/blob/master/images/store.png)
+<img src="images/store.png" height="300em">
 
-![alt text](https://github.com/SamuelGDMG/megahack/blob/master/images/products.png)
+<img src="images/products.png" height="300em">
 
-![alt text](https://github.com/SamuelGDMG/megahack/blob/master/images/single_product.png)
+<img src="images/single_product.png" height="300em">
 
-![alt text](https://github.com/SamuelGDMG/megahack/blob/master/images/chat_with_keyboard.png)
+<img src="images/chat_with_keyboard.png" height="300em">
 
-![alt text](https://github.com/SamuelGDMG/megahack/blob/master/images/cart.png)
+<img src="images/cart.png" height="300em">
