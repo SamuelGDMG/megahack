@@ -15,7 +15,7 @@ Tudo isso você pode conferir na demonstração abaixo:
 
 Instale o aplicativo em seu dispositivo Android:
 
-- [Baixar](https://github.com/SamuelGDMG/megahack/blob/master/apk/localmarket.apk)
+- [Baixar](https://github.com/SamuelGDMG/megahack/raw/master/apk/localmarket.apk)
 
 
 ## Telas
