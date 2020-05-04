@@ -107,7 +107,7 @@ class _ChatState extends State<Chat> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
                               Text(
-                                "Uniflores",
+                                "Neiva Flores",
                                 style: TextStyle(
                                     color: Colors.white, fontSize: 18),
                               ),
@@ -188,6 +188,8 @@ class _ChatState extends State<Chat> {
                       });
 
                       resposta();
+                      _text.text = '';
+                      _text.clear();
 
                     },
                     child: Material(
@@ -207,14 +209,13 @@ class _ChatState extends State<Chat> {
   }
 
  void resposta(){
-
    switch(childList.length){
      case 0 :  break;
       case 2 : this.setState(() {
       childList.add(Align(
       alignment: Alignment(-1, 0),
       child: Destinatario(
-        content: 'Olá, meu nome é Luiz e serei responsável por realizar o seu atendimento! Como posso te ajudar?',
+        content: 'Olá, meu nome é Neiva e serei responsável por realizar o seu atendimento! Como posso te ajudar?',
         time: '09:40',
       ),
     ));

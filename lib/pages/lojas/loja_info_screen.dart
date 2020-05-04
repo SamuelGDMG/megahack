@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:megahack/pages/lojas/360view.dart';
 import 'lojas_app_theme.dart';
 import 'products_screen.dart';
-import 'package:panorama/panorama.dart';
-
 
 class LojaInfoScreen extends StatefulWidget {
   @override
@@ -17,6 +16,7 @@ class _LojaInfoScreenState extends State<LojaInfoScreen>
   double opacity1 = 0.0;
   double opacity2 = 0.0;
   double opacity3 = 0.0;
+
   @override
   void initState() {
     animationController = AnimationController(
@@ -59,9 +59,7 @@ class _LojaInfoScreenState extends State<LojaInfoScreen>
               children: <Widget>[
                 AspectRatio(
                   aspectRatio: 1.2,
-                  child: Panorama(
-                    child:Image.asset('assets/images/floricultura.jpg'),
-                  ),
+                  child: Image.asset('assets/images/floricultura.jpg'),
                 ),
               ],
             ),
@@ -102,13 +100,13 @@ class _LojaInfoScreenState extends State<LojaInfoScreen>
                           ),
                           Padding(
                             padding: const EdgeInsets.only(
-                                left: 16, right: 16, bottom: 8, top: 16),
+                                left: 16, right: 16, bottom: 8, top: 8),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: <Widget>[
                                 Text(
-                                  'Uniflores',
+                                  'Neiva Flores',
                                   textAlign: TextAlign.left,
                                   style: TextStyle(
                                     fontWeight: FontWeight.w200,
@@ -118,10 +116,10 @@ class _LojaInfoScreenState extends State<LojaInfoScreen>
                                   ),
                                 ),
                                 Container(
-                                  child: Row(
+                                  child: Column(
                                     children: <Widget>[
                                       Text(
-                                        '4.3',
+                                        'Explorar',
                                         textAlign: TextAlign.left,
                                         style: TextStyle(
                                           fontWeight: FontWeight.w200,
@@ -130,13 +128,28 @@ class _LojaInfoScreenState extends State<LojaInfoScreen>
                                           color: LojaAppTheme.grey,
                                         ),
                                       ),
-                                      Icon(
-                                        Icons.star,
-                                        color: LojaAppTheme.nearlyBlue,
-                                        size: 24,
+                                      SizedBox(height: 8,),
+                                      Row(
+                                        children: <Widget>[
+                                          Text(
+                                            '4.3',
+                                            textAlign: TextAlign.left,
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.w200,
+                                              fontSize: 22,
+                                              letterSpacing: 0.27,
+                                              color: LojaAppTheme.grey,
+                                            ),
+                                          ),
+                                          Icon(
+                                            Icons.star,
+                                            color: Colors.amber,
+                                            size: 24,
+                                          ),
+                                        ],
                                       ),
                                     ],
-                                  ),
+                                  )
                                 )
                               ],
                             ),
@@ -161,7 +174,40 @@ class _LojaInfoScreenState extends State<LojaInfoScreen>
                                 padding: const EdgeInsets.only(
                                     left: 16, right: 16, top: 8, bottom: 8),
                                 child: Text(
-                                  'A Uniflores.com.br (Uniflores Floricultura Ltda, CNPJ 07.159.332/0001-62) é pioneira no comércio eletrônico brasileiro, uma das floriculturas online líderes no Brasil e se orgulha de oferecer há mais de 20 anos serviços inovadores e de qualidade para entrega de flores, cestas de café da manhã e de presentes na maioria das cidades do Brasil. A Uniflores oferece a melhor experiência em compra on-line para presentear os seus entes queridos com as mais belas flores em todo o Brasil. Aqui você pode ficar tranquilo(a) por estar efetuando compras com uma empresa idônea!',
+                                  'A Neiva Flores (CNPJ 07.159.322/0001-62) se orgulha de oferecer há mais de 20 anos serviços inovadores e de qualidade para entrega de flores, cestas de café da manhã e de presentes na região do Circuito das Águas Paulistas. A Neiva Flores oferece a melhor experiência para presentear os seus entes queridos com as mais belas flores do Brasil!',
+                                  textAlign: TextAlign.justify,
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.w200,
+                                    fontSize: 14,
+                                    color: LojaAppTheme.grey,
+                                  ),
+                                  maxLines: 20,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ),
+                            ),
+                          ),
+                          AnimatedOpacity(
+                            duration: const Duration(milliseconds: 500),
+                            opacity: opacity1,
+                            child: Padding(
+                              padding: const EdgeInsets.all(8),
+                              child: Row(
+                                children: <Widget>[
+                                  getTimeBoxUI('História'),
+                                ],
+                              ),
+                            ),
+                          ),
+                          Expanded(
+                            child: AnimatedOpacity(
+                              duration: const Duration(milliseconds: 500),
+                              opacity: opacity2,
+                              child: Padding(
+                                padding: const EdgeInsets.only(
+                                    left: 16, right: 16, top: 8, bottom: 8),
+                                child: Text(
+                                  'Em Junho de 2000, uma simples família nordestina composta por pai, mãe e filha decidiu se arriscar para mudar de vida e ir à São Paulo em busca de melhores oportunidades. Logo após chegarem na Estação da Luz... CONTINUAR LENDO',
                                   textAlign: TextAlign.justify,
                                   style: TextStyle(
                                     fontWeight: FontWeight.w200,
@@ -199,7 +245,8 @@ class _LojaInfoScreenState extends State<LojaInfoScreen>
                                       ),
                                       child: Icon(
                                         Icons.favorite,
-                                        semanticLabel: 'Adicionar aos favoritos',
+                                        semanticLabel:
+                                            'Adicionar aos favoritos',
                                         color: LojaAppTheme.nearlyBlue,
                                         size: 28,
                                       ),
@@ -218,17 +265,15 @@ class _LojaInfoScreenState extends State<LojaInfoScreen>
                                         ),
                                         boxShadow: <BoxShadow>[
                                           BoxShadow(
-                                              color: LojaAppTheme
-                                                  .nearlyBlue
+                                              color: LojaAppTheme.nearlyBlue
                                                   .withOpacity(0.5),
                                               offset: const Offset(1.1, 1.1),
                                               blurRadius: 10.0),
                                         ],
                                       ),
                                       child: Center(
-                                        child: GestureDetector(
-                                          
-                                          child: Text(
+                                          child: GestureDetector(
+                                        child: Text(
                                           'Ver Produtos',
                                           textAlign: TextAlign.left,
                                           style: TextStyle(
@@ -238,15 +283,15 @@ class _LojaInfoScreenState extends State<LojaInfoScreen>
                                             color: LojaAppTheme.nearlyWhite,
                                           ),
                                         ),
-                                        onTap: (){
-                                            Navigator.push(
-                                                context,
-                                                new MaterialPageRoute(
-                                                    builder: (BuildContext context) =>
-                                                        ProductsScreen()));
-                                          },
-                                        )
-                                      ),
+                                        onTap: () {
+                                          Navigator.push(
+                                              context,
+                                              new MaterialPageRoute(
+                                                  builder:
+                                                      (BuildContext context) =>
+                                                          ProductsScreen()));
+                                        },
+                                      )),
                                     ),
                                   )
                                 ],
@@ -276,10 +321,17 @@ class _LojaInfoScreenState extends State<LojaInfoScreen>
                     width: 60,
                     height: 60,
                     child: Center(
-                      child: Icon(
-                        Icons.shopping_cart,
+                      child: IconButton(
+                        icon: Icon(Icons.panorama),
                         color: LojaAppTheme.nearlyWhite,
-                        size: 30,
+                        iconSize: 30,
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              new MaterialPageRoute(
+                                  builder: (BuildContext context) =>
+                                      PremiumFeature()));
+                        },
                       ),
                     ),
                   ),

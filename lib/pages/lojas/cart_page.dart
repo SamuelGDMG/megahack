@@ -315,7 +315,7 @@ class _CartPageState extends State<CartPage> {
                         ),
 
                         Text(
-                          r"R$ 104,98",
+                          r"R$ 64,99",
                           style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w900,

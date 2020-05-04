@@ -233,7 +233,7 @@ class _HomeScreenState extends State<HomeScreen>
                     cursorColor: LojasAppTheme.buildLightTheme().primaryColor,
                     decoration: InputDecoration(
                       border: InputBorder.none,
-                      hintText: 'Busque por lojas ou produtos',
+                      hintText: 'Buscar lojas ou produtos',
                     ),
                   ),
                 ),
@@ -410,7 +410,7 @@ class _HomeScreenState extends State<HomeScreen>
             Expanded(
               child: Center(
                 child: Text(
-                  'MegaHack',
+                  'LocalMarket',
                   style: TextStyle(
                     fontWeight: FontWeight.w600,
                     fontSize: 22,

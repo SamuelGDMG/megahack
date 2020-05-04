@@ -305,7 +305,7 @@ class _ProductsScreenState extends State<ProductsScreen> {
           Container(
             width: 60,
             height: 60,
-            child: Image.asset('assets/products/logo3.png'),
+            child: Image.asset('assets/images/floricultura.jpg'),
           )
         ],
       ),
