@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:megahack/pages/lojas/cart_page.dart';
 import 'package:megahack/pages/main/lojas_list_view.dart';
 import 'package:megahack/pages/main/model/lojas_list_data.dart';
 import 'filters_screen.dart';
@@ -402,20 +403,14 @@ class _HomeScreenState extends State<HomeScreen>
                   },
                   child: Visibility(child: Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Icon(Icons.arrow_back),
-                  ), visible: false,),
+                    child: Icon(Icons.menu),
+                  ), visible: true,),
                 ),
               ),
             ),
             Expanded(
               child: Center(
-                child: Text(
-                  'LocalMarket',
-                  style: TextStyle(
-                    fontWeight: FontWeight.w600,
-                    fontSize: 22,
-                  ),
-                ),
+                child: Image.asset('assets/images/Local_Market_Horizontal.png')
               ),
             ),
             Container(
@@ -431,7 +426,10 @@ class _HomeScreenState extends State<HomeScreen>
                       borderRadius: const BorderRadius.all(
                         Radius.circular(32.0),
                       ),
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => CartPage()));
+                      },
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Icon(Icons.shopping_cart),

@@ -18,6 +18,8 @@ dependencies:
   panorama: ^0.0.2
   flutter_slidable: ^0.5.4
   splashscreen: ^1.2.0
+  audioplayers: ^0.15.1
+  fluttertoast: ^4.0.1
 
 dev_dependencies:
   flutter_test:
@@ -28,6 +30,7 @@ flutter:
   uses-material-design: true
 
   assets:
+    - assets/produto.wav
     - assets/images/
     - assets/360images/
     - assets/products/

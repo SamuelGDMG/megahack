@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:megahack/pages/lojas/cart_page.dart';
+import 'package:megahack/pages/lojas/product_info.dart';
 import 'package:panorama/panorama.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 
@@ -43,7 +44,12 @@ class _PremiumFeatureState extends State<PremiumFeature> {
                       ),
                     ],
                   ),
-                  onPressed: () {}),
+                  onPressed: () {
+                    Navigator.of(context, rootNavigator: true).pop();
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => ProductInfo()));
+
+                  }),
               DialogButton(
                 color: Colors.green,
                 width: 200.0,
@@ -59,11 +65,10 @@ class _PremiumFeatureState extends State<PremiumFeature> {
                   ],
                 ),
                 onPressed: () {
+                  Navigator.of(context, rootNavigator: true).pop();
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => CartPage()));
-                  setState(() {
-                    FocusScope.of(context).requestFocus(new FocusNode());
-                  });
+
                 },
               ),
             ],

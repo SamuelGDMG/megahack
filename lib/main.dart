@@ -15,15 +15,16 @@ class MegaHack extends StatelessWidget {
     return new SplashScreen(
       seconds: 6,
       navigateAfterSeconds: new AfterSplash(),
-      title: new Text('Bem vindo ao LocalMarket!',
+      title: new Text('Bem vindo, Samuel!',
         style: new TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 36.0,
         ),
       ),
-      image: Image.asset('assets/360images/floricultura_360_2.jpg'),
+      image: Image.asset('assets/images/Local_Market_Principal.png'),
       styleTextUnderTheLoader: new TextStyle(),
       loaderColor: Colors.blue,
+      photoSize: 100,
     );
   }
 }

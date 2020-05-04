@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:megahack/pages/lojas/cart_page.dart';
 import 'lojas_app_theme.dart';
+import 'package:audioplayers/audio_cache.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class ProductInfo extends StatefulWidget {
   @override
@@ -282,7 +284,41 @@ class _ProductInfoState extends State<ProductInfo>
                   ),
                 ),
               ),
-            )
+            ),
+            Positioned(
+              top: (MediaQuery.of(context).size.width / 1.2) - 24.0 - 35,
+              right: 35,
+              child: ScaleTransition(
+                alignment: Alignment.centerLeft,
+                scale: CurvedAnimation(
+                    parent: animationController, curve: Curves.fastOutSlowIn),
+                child: Card(
+                  color: LojaAppTheme.nearlyBlue,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(50.0)),
+                  elevation: 10.0,
+                  child: Container(
+                    width: 60,
+                    height: 60,
+                    child: Center(
+                      child: IconButton(
+                        icon: Icon(Icons.hearing),
+                        color: LojaAppTheme.nearlyWhite,
+                        iconSize: 30,
+                        onPressed: () {
+                          Fluttertoast.showToast(
+                            msg: "Ouvindo descrição do produto",
+                            toastLength: Toast.LENGTH_LONG,
+                          );
+                          final audioPlayer = AudioCache();
+                          audioPlayer.play('produto.wav');
+                        },
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),
