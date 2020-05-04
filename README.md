@@ -21,6 +21,7 @@ Instale o aplicativo em seu dispositivo Android:
 ## Telas
 
 - Menu principal
+<img src="images/main1.png" height="300em">
 ![alt text](https://github.com/SamuelGDMG/megahack/blob/master/images/main1.png)
 
 ![alt text](https://github.com/SamuelGDMG/megahack/blob/master/images/main2.png)
