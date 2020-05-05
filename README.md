@@ -11,7 +11,7 @@ O LocalMarket é a solução que garante ao público local de determinada regiã
 Por meio features como: Visão panorâmica 360 do interior da loja, áudios descritivos de cada produto gravados pelo vendedor ou proprietário da loja, chat particular e seções contendo informações mais detalhadas da loja, como por exemplo a sua história, entregamos uma experiência única e diferenciada que nenhum e-commerce oferece até então.
 
 Tudo isso você pode conferir na demonstração abaixo:
-- [Ver Pitch]()
+- [Ver Pitch](https://youtu.be/KaWxCabdIs4)
 
 Instale o aplicativo em seu dispositivo Android:
 
